@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import LogoComponent from "./src/Components/LogoComponent.js"; // Certifique-se de ajustar o caminho
-
+import { StatusBar, View, Text } from 'react-native';
 export default function App() {
   return (
     <View>
-      <LogoComponent imageSize={100} textSize={30} /> 
+      <StatusBar/>
+        <Text>Olá, mundo!</Text>
     </View>
   );
 }
