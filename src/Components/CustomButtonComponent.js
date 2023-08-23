@@ -12,9 +12,8 @@ export default function CustomButton({ imageSource, title, onPress }) {
 
 const styles = StyleSheet.create({
     button: {
-        alignItems: 'center',
-        backgroundColor: '#DA5C5C',
-        padding: 10,
+        alignSelf: 'center',
+        alignItems: "center",
         borderRadius: 10,
     },
     image: {

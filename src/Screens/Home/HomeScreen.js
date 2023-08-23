@@ -28,7 +28,7 @@ export default function HomeScreen() {
                     onPress={handleButtonPress}
                 />
             </HeaderComponent>
-            <View style={styles.contentContainer}>
+            <View style={styles.mainContent}>
                 <View style={styles.grayBlock} />
                 <Text style={styles.subtitle}>Minhas Listas</Text>
                 <ListComponent></ListComponent>
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#AECFE2",
         position: 'relative',
     },
-    contentContainer: {
+    mainContent: {
         flex: 1,
         padding: 20,
         width: "95%",
