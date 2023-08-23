@@ -2,7 +2,7 @@ import React from 'react';
 import { StatusBar, View, StyleSheet } from 'react-native';
 import { useFonts, Michroma_400Regular } from "@expo-google-fonts/michroma"; // Importe as fontes aqui
 
-import LoginScreen from "./src/Screens/LoginScreen/LoginScreen";
+import HomeScreen from "./src/Screens/Home/HomeScreen";
 
 export default function App() {
   const [fonteLoaded] = useFonts({
@@ -18,7 +18,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar />
-      <LoginScreen />
+      <HomeScreen />
     </View>
   );
 }
