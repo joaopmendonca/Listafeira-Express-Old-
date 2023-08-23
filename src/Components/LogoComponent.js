@@ -29,5 +29,8 @@ const styles = StyleSheet.create({
   },
   text: {
     alignSelf: 'center',
+    fontFamily: 'Michroma_400Regular', 
+    fontSize: 20, 
+    lineHeight: 24
   },
 });
