@@ -77,8 +77,6 @@ const styles = StyleSheet.create({
     },
     footer: {
         flexDirection: "row",
-        justifyContent: "space-between",
-        marginHorizontal: 10,
     },
     buttonContainer: {
         flex: 1, // Equal flex for all button containers

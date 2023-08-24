@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, TextInput, StyleSheet, TouchableOpacity } from "react-native";
 
 import HeaderComponent from "../../Components/HeaderComponent";
 import FooterComponent from "../../Components/FooterComponent";
@@ -26,36 +26,47 @@ export default function AddProduct() {
             <View style={styles.mainContent}>
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>Nome do Produto:</Text>
-                    <View style={styles.inputBox}></View>
+                    <TextInput
+                        style={styles.inputBox}
+                        placeholder="Digite o nome do produto"
+                        // Você pode adicionar outras props, como onChangeText para capturar a entrada
+                    />
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>Preço Médio:</Text>
-                    <View style={styles.inputBox}></View>
+                    <TextInput
+                        style={styles.inputBox}
+                        placeholder="Digite o preço médio"
+                        // Você pode adicionar outras props, como onChangeText para capturar a entrada
+                    />
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>Imagem do Produto:</Text>
-                    <CustomButton
-                        imageSource={require('../../../assets/button-upload.png')}
-                        title="Fazer Upload de Imagem"
+                    <TouchableOpacity
+                        style={styles.buttonBox}
                         onPress={handleImageUpload}
-                    />
+                    >
+                        <Text style={styles.buttonText}>Enviar Imagem</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
-            <FooterComponent>
-                <View style={styles.footer}>
-                    <CustomButton
-                        imageSource={require('../../../assets/button-confirm.png')}
-                        title="Confirm"
-                        onPress={handleConfirm}
-                    />
-                    <CustomButton
-                        imageSource={require('../../../assets/button-cancel.png')}
-                        title="Cancel"
-                        onPress={handleCancel}
-                    />
-                </View>
-
-            </FooterComponent>
+            {/* Envolve o FooterComponent em uma View */}
+            <View style={styles.footerContainer}>
+                <FooterComponent>
+                    <View style={styles.footer}>
+                        <CustomButton
+                            imageSource={require('../../../assets/button-confirm.png')}
+                            title="Confirm"
+                            onPress={handleConfirm}
+                        />
+                        <CustomButton
+                            imageSource={require('../../../assets/button-cancel.png')}
+                            title="Cancel"
+                            onPress={handleCancel}
+                        />
+                    </View>
+                </FooterComponent>
+            </View>
         </View>
     );
 }
@@ -80,16 +91,33 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     label: {
-        fontSize: 18,
+        fontSize: 15,
         marginBottom: 5,
+        fontFamily: 'Michroma_400Regular',
     },
     inputBox: {
         backgroundColor: "#EEE7A7",
         height: 60,
         borderRadius: 5,
     },
+    footerContainer: {
+        flex: 1, // Para garantir que o footer ocupe apenas o espaço necessário
+        justifyContent: "flex-end", // Alinha o footer na parte inferior
+    },
     footer: {
+        width: "100%",
         flexDirection: "row",
+        justifyContent: "space-evenly",
+        alignItems: "center"
+    },
+    buttonBox: {
+        marginTop: 5,
+        backgroundColor: "#EEE7A7",
+        height: 60,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    buttonText: {
+        fontSize: 20,
     }
-
 });

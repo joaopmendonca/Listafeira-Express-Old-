@@ -14,10 +14,9 @@ const styles = StyleSheet.create({
   footerContainer: {
     backgroundColor: "#DA5C5C",
     width: "100%",
-    height: 120,
-    justifyContent: "space-between",
-    alignItems: 'center', // Centraliza o conteúdo verticalmente
-    padding: 10,
+    height: 120,    
+    alignItems: "center",
+    justifyContent:"space-evenly",
     borderTopLeftRadius: 35, // Aumente este valor para um arredondamento maior
     borderTopRightRadius: 35, // Aumente este valor para um arredondamento maior
   },

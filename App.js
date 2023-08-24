@@ -2,9 +2,10 @@ import React from 'react';
 import { StatusBar, View, StyleSheet } from 'react-native';
 import { useFonts, Michroma_400Regular } from "@expo-google-fonts/michroma"; // Importe as fontes aqui
 
-import HomeScreen from "./src/Screens/Home/HomeScreen";
+import HomeScreen from "./src/Screens/HomeScreen/HomeScreen";
 import AddListScreen from "./src/Screens/AddListScreen/AddListScreen";
 import AddProduct from './src/Screens/AddProduct/AddProduct';
+import LoginScreen from './src/Screens/LoginScreen/LoginScreen';
 
 export default function App() {
   const [fonteLoaded] = useFonts({
@@ -20,7 +21,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar />
-      <AddProduct />
+      <LoginScreen />
     </View>
   );
 }
